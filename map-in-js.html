@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map in Js</title>
+  </head>
+  <body>
+    <h1 id="showUserNames"></h1>
+    <script>
+      let users = [
+        {
+          name: "Shazia",
+          userType: "super Admin",
+          email: "hello.shazia@gmail.com",
+          username: "dev_shazia",
+          phone: "0092 3465554403",
+        },
+        {
+          name: "Anisa",
+          userType: "super Admin",
+          email: "hello.anisa@gmail.com",
+          username: "dev_anisa",
+          phone: "0092 3465554403",
+        },
+        {
+          name: "Noor",
+          userType: "super Admin",
+          email: "hello.noor@gmail.com",
+          username: "dev_noor",
+          phone: "0092 3465554403",
+        },
+        {
+          name: "Aqdas",
+          userType: "super Admin",
+          email: "hello.aqdas@gmail.com",
+          username: "dev_aqdas",
+          phone: "0092 3465554403",
+        },
+      ];
+
+      const allUsers = users?.map((singleUser) => singleUser.email);
+      console.log("All users names...", allUsers);
+      document.getElementById("showUserNames").innerHTML = allUsers[0];
+    </script>
+  </body>
+</html>
