@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Methods</title>
+  </head>
+  <body>
+    <h1 id="showPrice"></h1>
+    <script>
+      let carsArray = [
+        { name: "Prius", modal: 2011, color: "white" },
+        { name: "Aqua", modal: 2011, color: "red" },
+        { name: "BMW", modal: 2011, color: "black" },
+        { name: "Ranger Rover", modal: 2011, color: "grey" },
+        { name: "V8", modal: 2011, color: "white" },
+        { name: "GLI", modal: 2011, color: "black" },
+      ];
+
+      const frameworks = [25, 100, 200, 130, 232];
+
+      let newCar = {
+        name: "Mehran",
+        modal: 2003,
+        color: "yellow",
+      };
+      //   carsArray.unshift(newCar);
+      //   carsArray.push(newCar);
+      //   carsArray?.splice(2, 0, newCar);
+
+      //   let resultCar = carsArray?.find((item) => item.color === "red");
+      //   console.log("Choice car...", resultCar);
+
+      //   let filteredCars = carsArray?.filter((item) => item.color === "white");
+      //   console.log("filtered cars....", filteredCars);
+
+      //   const sortedFramrworks = frameworks?.sort();
+
+      //   const result = frameworks?.sort(function (a, b) {
+      //     return a - b;
+      //   });
+
+      //   const result = frameworks?.sort((a, b) => a - b);
+
+      const sortedCars = carsArray?.sort((a, b) =>
+        a.name.localeCompare(b.name)
+      );
+      //   console.log(
+      //     "Check if car is present....",
+      //     carsArray.some((item) => item.name === "Prius")
+      //   );
+
+      //   const resultEvery = carsArray?.every((item) => item.modal === 2015);
+      //   console.log("is available....", resultEvery);
+
+      //reduce method example
+      let shoppingItems = [
+        { name: "watch", price: 20000, color: "white" },
+        { name: "mobile", price: 25000, color: "white" },
+        { name: "spray", price: 3000, color: "white" },
+        { name: "wallet", price: 1500, color: "white" },
+        { name: "charger", price: 7500, color: "white" },
+        { name: "laptop", price: 750000, color: "white" },
+      ];
+
+      const totalPrice = shoppingItems?.reduce(
+        (acc, item) => acc + item.price,
+        0
+      );
+      document.getElementById("showPrice").innerHTML =
+        "Total Shopping Price is Rs." + totalPrice;
+    </script>
+  </body>
+</html>
